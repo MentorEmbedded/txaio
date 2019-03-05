@@ -1,0 +1,71 @@
+Source: txaio
+Section: python
+Priority: optional
+Maintainer: Joe MacDonald <joe_macdonald@mentor.com>
+Build-Depends: debhelper,
+               dh-python,
+               python-all,
+               python-setuptools,
+               python-six,
+               python3-all,
+               python3-setuptools,
+               python3-six
+Standards-Version: 4.1.3
+Homepage: https://github.com/crossbario/txaio
+
+Package: python-txaio
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Suggests: python-txaio-doc
+Description: Twisted and asyncio / Trollius portability library. (Python 2)
+ txaio is a helper library for writing code that runs unmodified on both
+ Twisted and asyncio / Trollius.
+ .
+ This is like six, but for wrapping over differences between Twisted and
+ asyncio so one can write code that runs unmodified on both (aka source code
+ compatibility). In other words: your users can choose if they want asyncio or
+ Twisted as a dependency.
+ .
+ Note that, with this approach, user code runs under the native event loop of
+ either Twisted or asyncio. This is different from attaching either one's
+ event loop to the other using some event loop adapter.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-txaio
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests: python-txaio-doc
+Description: Twisted and asyncio / Trollius portability library. (Python 3)
+ txaio is a helper library for writing code that runs unmodified on both
+ Twisted and asyncio / Trollius.
+ .
+ This is like six, but for wrapping over differences between Twisted and
+ asyncio so one can write code that runs unmodified on both (aka source code
+ compatibility). In other words: your users can choose if they want asyncio or
+ Twisted as a dependency.
+ .
+ Note that, with this approach, user code runs under the native event loop of
+ either Twisted or asyncio. This is different from attaching either one's
+ event loop to the other using some event loop adapter.
+ .
+ This package installs the library for Python 3.
+
+Package: python-txaio-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Twisted and asyncio / Trollius portability library. (common documentation)
+ txaio is a helper library for writing code that runs unmodified on both
+ Twisted and asyncio / Trollius.
+ .
+ This is like six, but for wrapping over differences between Twisted and
+ asyncio so one can write code that runs unmodified on both (aka source code
+ compatibility). In other words: your users can choose if they want asyncio or
+ Twisted as a dependency.
+ .
+ Note that, with this approach, user code runs under the native event loop of
+ either Twisted or asyncio. This is different from attaching either one's
+ event loop to the other using some event loop adapter.
+ .
+ This is the common documentation package.
