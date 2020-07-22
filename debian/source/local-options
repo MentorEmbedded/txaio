@@ -1,2 +1,2 @@
 extend-diff-ignore = "^[^/]*[.]egg-info/"
-git-ref=v18.8.1
+git-ref=debian/18.8.1
